@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+    <a href="#" onClick="showSection('hakkımda')">Hakkımda</a>
+    <a href="#" onClick="showSection('beceriler')">Beceriler</a> 
+    <a href="#" onClick="showSection('iletisim')">İletişim</a>
+    </nav>
+    <section id="hakkımda" class="hidden">
+        <h2>Hakkımda</h2>
+        <p>Ben Deniz.Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi'nde Ön Yüz Yazılım Geliştirme 1.Sınıf öğrencisiyim.Şu anda küçük projeler yaparak kendimi geliştiriyorum.İleride daha büyük projelerde yer alabilmek için uğraşacağım.</p>
+    </section>
+    <section id="beceriler" class="hidden">
+        <h2>Beceriler</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+    <section id="iletisim" class="hidden">
+        <h2>İletişim</h2>
+        <p>E-mail: 250701010@ogr.atu.edu.tr</p>
+        <p>GitHub: <a href="https://github.com/thrashkafaa" target="_blank">thrashkafaa</a></p>
+    </section>
+
+    <script>
+    function showSection(id) {
+      // önce tüm bölümleri gizle
+      document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
+      // sonra seçilen bölümü göster
+      document.getElementById(id).classList.remove("hidden");
+    }
+    </script>
+</body>
+</html>
